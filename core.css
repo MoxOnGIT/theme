@@ -48,22 +48,6 @@ The 2 items above are not owned by me, They go to there respected owners
     opacity: 1;
 }
 
-/* Sakura image on top left */
-#app-mount::after {
-    content: "";
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 600px;
-    height: 600px;
-    background-image: url('https://r2.fivemanage.com/YYzzP6U6HRyU9RWJUS3OZ/sakurathingblllooo.png');
-    background-size: contain;
-    background-repeat: no-repeat;
-    pointer-events: none;
-    z-index: 9999;
-    opacity: 0.8;
-}
-
 /* removing backgrounds */
 
 /* Guild and Top bar transparency */
@@ -1246,4 +1230,56 @@ The 2 items above are not owned by me, They go to there respected owners
 
 #app-mount .winButton_a934d8 {
     top: 2px;
+}
+
+/* Add this after your existing styles */
+[data-user-id="1199276358510063646"] .username_d30d99::after {
+    content: "Theme Developer";
+    background-color: var(--primary1-colour);
+    color: white;
+    font-size: 10px;
+    padding: 2px 6px;
+    margin-left: 6px;
+    border-radius: 4px;
+    font-weight: bold;
+    vertical-align: middle;
+}
+
+/* For the user popup/profile modal */
+[data-user-id="1199276358510063646"] .userTagUsernameBase_d6d7c1::after {
+    content: "Theme Developer";
+    background-color: var(--primary1-colour);
+    color: white;
+    font-size: 12px;
+    padding: 3px 8px;
+    margin-left: 8px;
+    border-radius: 4px;
+    font-weight: bold;
+    vertical-align: middle;
+}
+
+/* Add a special border to your avatar */
+[data-user-id="1199276358510063646"] .avatar_f8541f {
+    border: 3px solid var(--primary1-colour);
+    border-radius: 50%;
+}
+
+/* Add animation to the badge */
+[data-user-id="1199276358510063646"] .username_d30d99::after,
+[data-user-id="1199276358510063646"] .userTagUsernameBase_d6d7c1::after {
+    animation: developer-badge 2s infinite;
+}
+
+@keyframes developer-badge {
+    0% {
+        background-color: var(--primary1-colour);
+    }
+
+    50% {
+        background-color: var(--primary2-colour);
+    }
+
+    100% {
+        background-color: var(--primary1-colour);
+    }
 }
