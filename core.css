@@ -37,20 +37,15 @@ The 2 items above are not owned by me, They go to there respected owners
 #app-mount::before {
     content: "";
     position: fixed;
-    top: 0;
+    top: 200px;
     right: 0;
     width: 400px;
-    /* Adjust size as needed */
     height: 600px;
-    /* Adjust size as needed */
     background: url('https://r2.fivemanage.com/YYzzP6U6HRyU9RWJUS3OZ/zerotwooo.png') no-repeat;
-    /* Zero Two transparent PNG */
     background-size: contain;
     z-index: 999999;
     pointer-events: none;
-    /* Allows clicking through the image */
-    opacity: 0.8;
-    /* Adjust transparency as needed */
+    opacity: 1;
 }
 
 /* removing backgrounds */
