@@ -37,7 +37,7 @@ The 2 items above are not owned by me, They go to there respected owners
 #app-mount::before {
     content: "";
     position: fixed;
-    top: 600px;
+    top: 800px;
     right: 0;
     width: 250px;
     height: 375px;
@@ -54,8 +54,8 @@ The 2 items above are not owned by me, They go to there respected owners
     position: fixed;
     top: 0;
     left: 0;
-    width: 400px;
-    height: 400px;
+    width: 600px;
+    height: 600px;
     background-image: url('https://r2.fivemanage.com/YYzzP6U6HRyU9RWJUS3OZ/sakurabloommm.png');
     background-size: contain;
     background-repeat: no-repeat;
