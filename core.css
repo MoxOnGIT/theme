@@ -1283,3 +1283,48 @@ The 2 items above are not owned by me, They go to there respected owners
         background-color: var(--primary1-colour);
     }
 }
+
+/* Profile modal styling */
+[data-user-id="1199276358510063646"] .userProfileInner_c69a7b::before {
+    content: "Theme Developer";
+    background-color: var(--primary1-colour);
+    color: white;
+    font-size: 14px;
+    padding: 4px 10px;
+    margin: 8px;
+    border-radius: 4px;
+    font-weight: bold;
+    display: block;
+    width: fit-content;
+    animation: developer-badge 2s infinite;
+}
+
+/* Add special styling to the profile header */
+[data-user-id="1199276358510063646"] .profileBanner_d0f231 {
+    background-color: var(--primary1-colour) !important;
+}
+
+/* Add a special border to the large profile avatar */
+[data-user-id="1199276358510063646"] .avatarStack_d8ccc7 .avatar_f8541f {
+    border: 4px solid var(--primary1-colour);
+    background-color: var(--secondary3-colour);
+}
+
+/* Add subtle animation to the banner */
+[data-user-id="1199276358510063646"] .profileBanner_d0f231 {
+    animation: banner-pulse 3s infinite;
+}
+
+@keyframes banner-pulse {
+    0% {
+        background-color: var(--primary1-colour) !important;
+    }
+
+    50% {
+        background-color: var(--primary2-colour) !important;
+    }
+
+    100% {
+        background-color: var(--primary1-colour) !important;
+    }
+}
