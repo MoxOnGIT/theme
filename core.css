@@ -45,7 +45,7 @@ The 2 items above are not owned by me, They go to there respected owners
     background-size: contain;
     z-index: 999999;
     pointer-events: auto;
-    opacity: 1;
+    opacity: 0;
     transition: opacity 0.3s, transform 0.3s;
 }
 
@@ -1355,4 +1355,30 @@ The 2 items above are not owned by me, They go to there respected owners
 #app-mount .typeWindows_a934d8:hover+#app-mount::after {
     opacity: 1;
     /* Show the text popup */
+}
+
+/* Trigger the hover effect on #app-mount::before when hovering over the typeWindows_a934d8:after */
+#app-mount .typeWindows_a934d8:hover~#app-mount::before {
+    opacity: 1;
+    /* Adjust this to your desired hover effect */
+    transform: scale(1.05);
+    /* Example of a hover effect */
+}
+
+/* Ensure the hover effect is applied correctly */
+#app-mount::before {
+    content: "";
+    position: fixed;
+    top: 700px;
+    right: 0;
+    width: 250px;
+    height: 375px;
+    background: url('https://r2.fivemanage.com/YYzzP6U6HRyU9RWJUS3OZ/zerotwooo.png') no-repeat;
+    background-size: contain;
+    z-index: 999999;
+    pointer-events: auto;
+    opacity: 0;
+    /* Initially hidden */
+    transition: opacity 0.3s, transform 0.3s;
+    /* Ensure smooth transition */
 }
