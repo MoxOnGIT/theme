@@ -45,52 +45,29 @@ The 2 items above are not owned by me, They go to there respected owners
     background-size: contain;
     z-index: 999999;
     pointer-events: auto;
-    /* Allow pointer events */
     opacity: 1;
     transition: opacity 0.3s, transform 0.3s;
-    /* Smooth transition */
 }
 
-/* Show the hover effect when hovering over the defined area */
-#app-mount::before:hover {
-    opacity: 0.8;
-    /* Change opacity on hover */
-    transform: scale(1.05);
-    /* Slightly scale up the image */
+/* Only show the text popup when hovering over the image */
+#app-mount .typeWindows_a934d8:hover+#app-mount::after {
+    opacity: 1;
 }
 
 /* Text popup for crediting Mox */
 #app-mount::after {
     content: "Theme by Mox";
-    /* Text content */
     position: fixed;
-    /* Position it fixed */
     bottom: 20px;
-    /* Position from the bottom */
     left: 50%;
-    /* Center horizontally */
     transform: translateX(-50%);
-    /* Adjust for centering */
     background-color: rgba(0, 0, 0, 0.7);
-    /* Semi-transparent background */
     color: white;
-    /* Text color */
     padding: 10px 15px;
-    /* Padding */
     border-radius: 5px;
-    /* Rounded corners */
     font-size: 14px;
-    /* Font size */
     opacity: 0;
-    /* Initially hidden */
     transition: opacity 0.3s;
-    /* Smooth transition */
-}
-
-/* Show the text popup only when hovering over the defined area */
-#app-mount::before:hover+#app-mount::after {
-    opacity: 1;
-    /* Show on hover */
 }
 
 /* removing backgrounds */
@@ -1372,4 +1349,10 @@ The 2 items above are not owned by me, They go to there respected owners
     100% {
         background-color: var(--primary1-colour) !important;
     }
+}
+
+/* Change hover effect to trigger on the typeWindows_a934d8:after */
+#app-mount .typeWindows_a934d8:hover+#app-mount::after {
+    opacity: 1;
+    /* Show the text popup */
 }
