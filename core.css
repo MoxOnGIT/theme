@@ -1283,3 +1283,54 @@ The 2 items above are not owned by me, They go to there respected owners
         background-color: var(--primary1-colour);
     }
 }
+
+/* Change styles for the inner_c69a7b fullSize_c69a7b class of the user with ID 1199276358510063646 */
+[data-user-id="1199276358510063646"] .inner_c69a7b.fullSize_c69a7b {
+    background-color: var(--primary1-colour);
+    /* Background color */
+    border: 3px solid var(--primary1-colour);
+    /* Border */
+    border-radius: 50%;
+    /* Rounded corners */
+    position: relative;
+    /* Positioning for pseudo-elements */
+}
+
+/* Add credit text to the inner_c69a7b fullSize_c69a7b class */
+[data-user-id="1199276358510063646"] .inner_c69a7b.fullSize_c69a7b::after {
+    content: "Credits: Theme Developer - Mox";
+    /* Credit text */
+    background-color: var(--primary2-colour);
+    /* Background color for the credit */
+    color: white;
+    /* Text color */
+    font-size: 10px;
+    /* Font size */
+    padding: 2px 6px;
+    /* Padding around the text */
+    margin-left: 6px;
+    /* Space between the text and the avatar */
+    border-radius: 4px;
+    /* Rounded corners for the credit */
+    font-weight: bold;
+    /* Bold text */
+    vertical-align: middle;
+    /* Aligns the text vertically */
+    animation: credit-badge 2s infinite;
+    /* Animation for the credit */
+}
+
+/* Keyframes for the credit animation */
+@keyframes credit-badge {
+    0% {
+        background-color: var(--primary2-colour);
+    }
+
+    50% {
+        background-color: var(--primary1-colour);
+    }
+
+    100% {
+        background-color: var(--primary2-colour);
+    }
+}
