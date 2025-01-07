@@ -48,6 +48,50 @@ The 2 items above are not owned by me, They go to there respected owners
     opacity: 1;
 }
 
+/* Add hover effect for the image */
+#app-mount::before:hover {
+    opacity: 0.8;
+    /* Change opacity on hover */
+    transform: scale(1.05);
+    /* Slightly scale up the image */
+    transition: opacity 0.3s, transform 0.3s;
+    /* Smooth transition */
+}
+
+/* Text popup for crediting Mox */
+#app-mount::after {
+    content: "Theme made by Mox";
+    /* Text content */
+    position: fixed;
+    /* Position it fixed */
+    bottom: 20px;
+    /* Position from the bottom */
+    left: 50%;
+    /* Center horizontally */
+    transform: translateX(-50%);
+    /* Adjust for centering */
+    background-color: rgba(0, 0, 0, 0.7);
+    /* Semi-transparent background */
+    color: white;
+    /* Text color */
+    padding: 10px 15px;
+    /* Padding */
+    border-radius: 5px;
+    /* Rounded corners */
+    font-size: 14px;
+    /* Font size */
+    opacity: 0;
+    /* Initially hidden */
+    transition: opacity 0.3s;
+    /* Smooth transition */
+}
+
+/* Show the text popup on hover */
+#app-mount:hover::after {
+    opacity: 1;
+    /* Show on hover */
+}
+
 /* removing backgrounds */
 
 /* Guild and Top bar transparency */
