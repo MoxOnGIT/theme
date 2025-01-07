@@ -46,16 +46,16 @@ The 2 items above are not owned by me, They go to there respected owners
     z-index: 999999;
     pointer-events: none;
     opacity: 1;
+    transition: opacity 0.3s, transform 0.3s;
+    /* Smooth transition */
 }
 
-/* Add hover effect for the image */
+/* Only show the text popup when hovering over the image */
 #app-mount:hover::before {
     opacity: 0.8;
     /* Change opacity on hover */
     transform: scale(1.05);
     /* Slightly scale up the image */
-    transition: opacity 0.3s, transform 0.3s;
-    /* Smooth transition */
 }
 
 /* Text popup for crediting Mox */
@@ -86,8 +86,8 @@ The 2 items above are not owned by me, They go to there respected owners
     /* Smooth transition */
 }
 
-/* Show the text popup on hover */
-#app-mount:hover::after {
+/* Show the text popup only when hovering over the image */
+#app-mount:hover::before:hover+#app-mount::after {
     opacity: 1;
     /* Show on hover */
 }
