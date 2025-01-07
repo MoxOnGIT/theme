@@ -44,14 +44,15 @@ The 2 items above are not owned by me, They go to there respected owners
     background: url('https://r2.fivemanage.com/YYzzP6U6HRyU9RWJUS3OZ/zerotwooo.png') no-repeat;
     background-size: contain;
     z-index: 999999;
-    pointer-events: none;
+    pointer-events: auto;
+    /* Allow pointer events */
     opacity: 1;
     transition: opacity 0.3s, transform 0.3s;
     /* Smooth transition */
 }
 
-/* Only show the text popup when hovering over the image */
-#app-mount:hover::before {
+/* Show the hover effect when hovering over the defined area */
+#app-mount::before:hover {
     opacity: 0.8;
     /* Change opacity on hover */
     transform: scale(1.05);
@@ -86,8 +87,8 @@ The 2 items above are not owned by me, They go to there respected owners
     /* Smooth transition */
 }
 
-/* Show the text popup only when hovering over the image */
-#app-mount:hover::before:hover+#app-mount::after {
+/* Show the text popup only when hovering over the defined area */
+#app-mount::before:hover+#app-mount::after {
     opacity: 1;
     /* Show on hover */
 }
