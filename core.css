@@ -49,7 +49,7 @@ The 2 items above are not owned by me, They go to there respected owners
 }
 
 /* Add hover effect for the image */
-#app-mount::before:hover {
+#app-mount:hover::before {
     opacity: 0.8;
     /* Change opacity on hover */
     transform: scale(1.05);
@@ -60,7 +60,7 @@ The 2 items above are not owned by me, They go to there respected owners
 
 /* Text popup for crediting Mox */
 #app-mount::after {
-    content: "Theme made by Mox";
+    content: "Theme by Mox";
     /* Text content */
     position: fixed;
     /* Position it fixed */
